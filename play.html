@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="./iconfont/iconfont.css"/>
+		<link rel="stylesheet" href="./css/play.css" />
+		<style >
+			html,body{
+				margin: 0;
+				padding: 0
+			}
+			.wrap{
+				position: absolute;
+				top: 50%;
+				left: 0;
+				padding: 0 10px;
+				width: 100%;
+				box-sizing: border-box;
+				z-index: 2;
+				background-color: #fff
+			}
+			.mask{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: rgba(0, 0, 0, .3)
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="wrap" id="mv"></div>
+		<div class="mask"></div>
+
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/play.js"></script>
+		<script type="text/javascript">
+			// 歌曲是通过网络连接获取的，下面的已经过期
+			//可初始化播放 也可以控制点击播放
+			let player = new Music({
+				el: document.getElementById('mv'),
+				list: [{
+					name: '蜂鸟',
+					url: 'http://m10.music.126.net/20190322155411/6899c163d017786cea38a19c5ceed870/ymusic/0f0b/0609/015c/8a6a8ac59c1ce4f63e75668f4c3a16ca.mp3'
+				},{
+					name: '胆小鬼',
+					url: 'http://m10.music.126.net/20190322152718/cdcc998aca27d816c1ebadb4b69ff48c/ymusic/80e3/8178/172d/344efee73f0b2e7692571e038c8457a9.mp3'
+				}]
+			});
+			let list = [{
+				name: '蜂鸟',
+				url: 'http://m10.music.126.net/20190322155411/6899c163d017786cea38a19c5ceed870/ymusic/0f0b/0609/015c/8a6a8ac59c1ce4f63e75668f4c3a16ca.mp3'
+				},{
+				name: '胆小鬼',
+				url: 'http://m10.music.126.net/20190322152718/cdcc998aca27d816c1ebadb4b69ff48c/ymusic/80e3/8178/172d/344efee73f0b2e7692571e038c8457a9.mp3'
+			}]
+			/*  setTimeout(() => {
+			 	player.play(list)
+			 }, 1000); */
+		</script>
+	</body>
+
+</html>
